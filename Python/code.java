@@ -21,6 +21,17 @@ class Code {
         }
     }
 
+    public int pop(int[] arr){
+        if (top==0) {
+            System.out.println("stack is underflow");
+            return -1;
+        }
+        else{
+            top--;
+            return arr[top];
+        }
+    }
+
     public int show(int[] arr){
          if (top==0) {
              System.out.println("stack underflow");
@@ -52,6 +63,9 @@ public class code {
                     System.out.println("enter a element which is you enter");
                     int ele = sc.nextInt();
                     c.push(arr, size, ele);
+                    break;
+                case 2:
+                    System.out.println(c.pop(arr));
                     break;
                 case 3:
                     System.out.println("your stack is:");
